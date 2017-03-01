@@ -1,0 +1,110 @@
+h1 {
+    color: #00ff00
+}
+
+h2 {
+    color: #dda0dd
+}
+
+p {
+    color: rgb(0, 0, 255)
+}
+
+span {
+    background-color: yellow;
+    font-weight: bold
+}
+
+.curlycontainer {
+    border: 1px solid #b8b8b8;
+    margin-bottom: 1em;
+    width: 300px;
+}
+
+.curlycontainer .innerdiv {
+    background: transparent url(../img/button-hover.gif) bottom right no-repeat;
+    padding: 1px 4px 15px 5px;
+    width: 400px;
+    height: 400px;
+}
+
+.figure {
+    float: right;
+    width: 20%;
+    border: thin silver solid;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.fifure img {
+    width: 136px;
+    height: 200px;
+}
+
+.figure p {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+}
+
+#menu {
+    width: 200px;
+}
+
+#menu a {
+    display: block;
+    height: 32px;
+    background-repeat: no-repeat;
+    padding-top: 8px;
+    padding-left: 35px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.tablelist {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 1px solid #EBDDBC;
+}
+
+.tablelist th {
+    margin: 0;
+    padding: 4px 6px;
+    border: 1px solid #EBDDBC;
+    background-color: #F1EFD8;
+}
+
+.tablelist td {
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #EBDDBC;
+}
+
+#menu {
+    width: 900px;
+    height: 35px;
+    background-color: #0FF;
+}
+
+#menu a {
+    display: block;
+    height: 30px;
+    padding-top: 5px;
+    width: 120px;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background-color: #00F;
+    color: #FFF;
+    font-weight: bold;
+}
