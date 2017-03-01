@@ -11,7 +11,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                                <label for="username" class="col-md-4 control-label">Name (*)</label>
+                                <label for="username" class="col-md-4 control-label">Username (*)</label>
 
                                 <div class="col-md-6">
                                     <input id="username" type="text" class="form-control" name="username"
@@ -49,6 +49,21 @@
                                 </div>
                             </div>
 
+                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                                <label for="email" class="col-md-4 control-label">Email (*)</label>
+
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control" name="email"
+                                           value="{{ old('email') }}" required>
+
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <label for="first_name" class="col-md-4 control-label">First name</label>
 
@@ -65,21 +80,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                <label for="email" class="col-md-4 control-label">E-Mail Address (*)</label>
-
-                                <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control" name="email"
-                                           value="{{ old('email') }}" required>
-
-                                    @if ($errors->has('email'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
                             <div class="form-group">
                                 <label for="address" class="col-md-4 control-label">Address</label>
 
@@ -89,7 +89,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="phone_number" class="col-md-4 control-label">Phone number</label>
+                                <label for="phone_number" class="col-md-4 control-label">Phone</label>
 
                                 <div class="col-md-6">
                                     <input id="phone_number" type="text" class="form-control" name="phone_number">
@@ -108,7 +108,7 @@
                             <div class="form-group">
                                 <label for="dob" class="col-md-4 control-label">Birthday</label>
                                 <div class="col-md-6">
-                                    <input id="dob" type="date" class="form-control" name="dob"
+                                    <input id="dob" type="datetime" class="form-control" name="dob"
                                            placeholder="YYYY-MM-DD">
                                 </div>
                             </div>
@@ -118,6 +118,9 @@
                                     <button type="submit" class="btn btn-primary">
                                         Register
                                     </button>
+                                    <a class="btn btn-danger red" href="{{url('home')}}">
+                                        Cancel
+                                    </a>
                                 </div>
                             </div>
                         </form>
