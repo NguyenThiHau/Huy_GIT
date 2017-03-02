@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ProductController@index');
+Route::resource('cart', 'CartController');
+Route::resource('order  ', 'OrderController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
