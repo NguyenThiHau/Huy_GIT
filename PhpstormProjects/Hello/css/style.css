@@ -1,0 +1,223 @@
+@import url("bootstrap.min.css");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#anhbanner {
+    width: 970px;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.search {
+    background: white;
+    height: 35px;
+    margin-top: 5px;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+}
+
+#searchicon {
+    float: right;
+    position: absolute;
+    right: 25px;
+}
+
+.form-control_search {
+    float: right;
+    width: 50%;
+    border: 1px solid grey;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    background: #e1e1e1;
+}
+
+header .menu {
+    height: 94px;
+    padding-top: 0.5px;
+    background-color: #222222;
+    margin-bottom: 0;
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+#top_nav ul li {
+    list-style: none;
+    display: inline-block;
+    width: 14.5%;
+    border-right: 1px solid grey;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+
+#top_nav ul li a {
+    margin: 10px;
+    color: white;
+}
+
+#banner {
+    height: 13px;
+    margin-top: 0;
+}
+
+.A {
+    background: #f0f0f0;
+    width: 225px;
+    height: 125px;
+}
+
+.A h4 {
+    color: green;
+    text-align: center;
+    margin-top: 0;
+}
+
+.A p {
+    margin: 5px 20px 20px 20px;
+}
+
+.B {
+    background: #f0f0f0;
+    width: 225px;
+    height: 125px;
+}
+
+.B h4 {
+    color: green;
+    text-align: center;
+    margin-top: 0;
+}
+
+.B p {
+    margin: 5px 20px 20px 20px;
+}
+
+.C {
+    background: #f0f0f0;
+    width: 225px;
+    height: 125px;
+}
+
+.C h4 {
+    color: green;
+    text-align: center;
+    margin-top: 0;
+}
+
+.C p {
+    margin: 5px 20px 20px 20px;
+}
+
+.D {
+    background: #f0f0f0;
+    width: 225px;
+    height: 125px;
+}
+
+.D h4 {
+    color: green;
+    text-align: center;
+    margin-top: 0;
+}
+
+.D p {
+    margin: 5px 20px 20px 20px;
+}
+
+#line {
+    margin: 20px 20px 20px 50px;
+    padding-bottom: 5px;
+}
+
+.lorem1 {
+    border-bottom: 1px solid grey;
+}
+
+.lorem1 a {
+    color: #3e8f3e;
+    margin-left: 120px;
+}
+
+.lorem2 {
+    border-bottom: 1px solid grey;
+}
+
+.lorem2 a {
+    color: #3e8f3e;
+    margin-left: 120px;
+}
+
+.row.info {
+    margin-bottom: 30px;
+}
+
+.indo b {
+    color: #3e8f3e;
+}
+
+.john b {
+    color: black;
+}
+
+footer {
+    margin-top: 50px;
+    background: #222222;
+    height: 520px;
+}
+
+footer h5 {
+    margin: 30px 0px 25px 0px;
+    color: grey;
+}
+
+footer h6 {
+    color: grey;
+}
+
+footer p {
+    color: grey;
+}
+
+footer ul li {
+    border-bottom: 1px solid grey;
+    margin-bottom: 9px;
+}
+
+footer ul li a {
+    color: #818d67;
+}
+
+.hinh2 {
+    border: 1px solid grey;
+    margin-bottom: 25px;
+}
+
+footer a {
+    color: #818d67;
+}
+
+#exampleInputname.form-control {
+    margin: 20px 0px 10px 0px;
+}
+
+#exampleInputemail.form-control {
+    margin-bottom: 10px;
+}
+
+.end {
+    margin-top: 30px;
+    padding: 24px 0 28px 0;
+    border-top: 1px solid black;
+}
+

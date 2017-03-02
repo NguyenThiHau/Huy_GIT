@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- DataTables CSS -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</head>
+<body>
+<button type="button" id="btnaddnew">Thêm mới</button>
+<button type="button" id="btnsearch">Tìm kiếm</button>
+<form action="#" method="post" id="formnew" class="form hide">
+    <div class="container">
+        <h1>Bảng thêm mới</h1>
+        <div>
+            <label><b>STT</b></label>
+            <input type="text" id="id" value=""/></br>
+            <span id="id_error"></span>
+        </div>
+        <div>
+            <label><b>Tên sản phẩm</b></label>
+            <input type="text" id="product" value=""/></br>
+            <span id="product_error"></span>
+        </div>
+        <div>
+            <label><b>Giá sản phẩm</b></label>
+            <input type="text" id="price" value=""/></br>
+            <span id="price_error"></span>
+        </div>
+        <div>
+            <label><b>Loại</b></label>
+            <input type="text" id="kind" value=""/></br>
+            <span id="kind_error"></span>
+        </div>
+        <div>
+            <label><b>Số lượng</b></label>
+            <input type="text" id="number" value=""/></br>
+            <span id="number_error"></span>
+        </div>
+        <button type="button" id="save">Thêm</button>
+        <button type="button" id="cancel">Hủy</button>
+    </div>
+</form>
+<form action="#" method="post" id="formsearch" class="form hide">
+    <div class="container">
+        <h1>Bảng tìm kiếm</h1>
+        <label><b>Tìm STT</b></label>
+        <input type="text" id="searchid" value=""/></br>
+        <label><b>Tìm sản phẩm</b></label>
+        <input type="text" id="searchproduct" value=""/></br>
+        <label><b>Tìm giá sản phẩm</b></label>
+        <input type="text" id="searchprice" value=""/></br>
+        <label><b>Tìm loại</b></label>
+        <input type="text" id="searchkind" value=""/></br>
+        <button type="button" id="search">Tìm</button>
+        <button type="button" id="exit">Thoát</button>
+    </div>
+</form>
+<table class="hovertable" id="dtable">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Tên sản phẩm</th>
+        <th>Giá sản phẩm</th>
+        <th>Loại</th>
+        <th>Số lượng</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="item-1">1</td>
+        <td class="item-2">iPhone</td>
+        <td class="item-3">5000000</td>
+        <td class="item-4">7</td>
+        <td class="item-5">15</td>
+    </tr>
+    <tr>
+        <td class="item-1">2</td>
+        <td class="item-2">Samsung</td>
+        <td class="item-3">6000000</td>
+        <td class="item-4">7S</td>
+        <td class="item-5">10</td>
+    </tr>
+    <tr>
+        <td class="item-1">3</td>
+        <td class="item-2">Nokia</td>
+        <td class="item-3">1500000</td>
+        <td class="item-4">N900</td>
+        <td class="item-5">5</td>
+    </tr>
+    <tr>
+        <td class="item-1">4</td>
+        <td class="item-2">Blackberry</td>
+        <td class="item-3">2000000</td>
+        <td class="item-4">7i</td>
+        <td class="item-5">8</td>
+    </tr>
+    <tr>
+        <td class="item-1">5</td>
+        <td class="item-2">iPad15</td>
+        <td class="item-3">4500000</td>
+        <td class="item-4">5</td>
+        <td class="item-5">30</td>
+    </tr>
+    <tr>
+        <td class="item-1">6</td>
+        <td class="item-2">Dochi</td>
+        <td class="item-3">6000000</td>
+        <td class="item-4">7i</td>
+        <td class="item-5">5</td>
+    </tr>
+    <tr>
+        <td class="item-1">7</td>
+        <td class="item-2">Xiami</td>
+        <td class="item-3">4000000</td>
+        <td class="item-4">x6</td>
+        <td class="item-5">10</td>
+    </tr>
+    <tr>
+        <td class="item-1">8</td>
+        <td class="item-2">Sony</td>
+        <td class="item-3">2000000</td>
+        <td class="item-4">xpedia</td>
+        <td class="item-5">15</td>
+    </tr>
+    <tr>
+        <td class="item-1">9</td>
+        <td class="item-2">O2</td>
+        <td class="item-3">7000000</td>
+        <td class="item-4">O9</td>
+        <td class="item-5">5</td>
+    </tr>
+    <tr>
+        <td class="item-1">10</td>
+        <td class="item-2">Camry</td>
+        <td class="item-3">4500000</td>
+        <td class="item-4">Camry</td>
+        <td class="item-5">17</td>
+    </tr>
+    <tr>
+        <td class="item-1">11</td>
+        <td class="item-2">Vepix</td>
+        <td class="item-3">5000000</td>
+        <td class="item-4">Vepix</td>
+        <td class="item-5">18</td>
+    </tr>
+    </tbody>
+</table>
+<div id="paging"></div>
+<input type="hidden" id="currentPage" value="1"/>
+</body>
+</html>

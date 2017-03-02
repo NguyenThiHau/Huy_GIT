@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- DataTables CSS -->
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</head>
+<body>
+<input type="hidden" id="checkEdit" value="false"/>
+<button type="button" id="btnaddnew">Add New</button>
+<button type="button" id="btnsearch">Search</button>
+<form action="#" method="post" id="formsearch" class="form hide">
+    <div class="container">
+        <label><b>ID</b></label>
+        <input type="text" id="idsearch" value=""/></br>
+        <label><b>Name</b></label>
+        <input type="text" id="namesearch" value=""/></br>
+        <label><b>Age</b></label>
+        <input type="text" id="agesearchmin" placeholder="Min" value=""/></br>
+        <input type="text" id="agesearchmax" placeholder="Max" value=""/></br>
+        <button type="button" id="search">Search</button>
+        <button type="button" id="exit">Exit</button>
+    </div>
+</form>
+<form action="#" method="post" id="formnew" class="form hide">
+    <div class="container">
+        <label><b>ID</b></label>
+        <input type="text" id="id" name="id" class="control"/></br>
+        <label><b>Name</b></label>
+        <input type="text" id="name" name="name" class="control"/></br>
+        <label><b>Age</b></label>
+        <input type="text" id="age" name="age" class="control"/></br>
+        <label><b>Adress</b></label>
+        <input type="text" id="address" name="address" class="control"/></br>
+        <label><b>Phone</b></label>
+        <input type="text" id="phone" name="phone" class="control"/></br>
+        <label><b>Date of Birth</b></label>
+        <input type="text" id="dob" name="dob" class="control"/></br>
+        <label><b>Email</b></label>
+        <input type="text" id="email" name="email" class="control"/></br>
+        <label><b>Username</b></label>
+        <input type="text" id="username" name="username" class="control"/></br>
+        <label><b>Status</b></label>
+        <input type="text" id="status" name="status"/></br>
+        <button type="button" id="save">Save</button>
+        <button type="button" id="cancel">Cancel</button>
+    </div>
+</form>
+<table class="hovertable" id="dtable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Date of birth</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="message">
+            <td colspan="10">Insert record</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

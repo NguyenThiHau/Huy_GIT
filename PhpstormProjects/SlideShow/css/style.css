@@ -1,0 +1,86 @@
+.slideshow-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mySlides img {
+    display: none;
+}
+
+img.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -40px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+span {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    opacity: 0.3;
+    /*border-radius: 50%;*/
+    /*display: inline-block;*/
+    transition: background-color 0.6s ease;
+}
+
+span img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 5px solid grey;
+}
+
+.active, span:hover {
+    opacity: 2;
+}
+
+#btnPlay {
+    background: url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-play-128.png");
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#btnPause {
+    background: url("https://cdn1.iconfinder.com/data/icons/material-audio-video/20/pause-circle-outline-128.png");
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline-block;
+}
+

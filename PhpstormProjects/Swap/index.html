@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</head>
+<body>
+<div class="container">
+    <ul id="box1">
+        <li class="item left" data-order="1" ondblclick="moving(this);">Cat 1</li>
+        <li class="item left" data-order="2" ondblclick="moving(this);">Cat 2</li>
+        <li class="item left" data-order="3" ondblclick="moving(this);">Cat 3</li>
+    </ul>
+    <div id="boxbutton">
+        <button id="type1" type="button">&#10095;&#10095;</button>
+        <button id="type2" type="button">&#10095;</button>
+        <button id="type3" type="button">&#10094;</button>
+        <button id="type4" type="button">&#10094;&#10094;</button>
+    </div>
+    <ul id="box2">
+        <li class="item" data-order="4" ondblclick="moving(this);">Cat 4</li>
+        <li class="item" data-order="5" ondblclick="moving(this);">Cat 5</li>
+        <li class="item" data-order="6" ondblclick="moving(this);">Cat 6</li>
+    </ul>
+</div>
+</body>
+</html>

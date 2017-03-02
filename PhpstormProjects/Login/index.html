@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript"
+            src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+
+</head>
+<body>
+<form action="#" method="post" id="loginform">
+    <div class="imgcontainer">
+        <img src="http://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+        <div id="message" class="hide">Test</div>
+        <div class="container">
+            <label><b>Tên đăng ký</b></label>
+            <input type="text" placeholder="Nhập tài khoản" id="username" name="username" class="control"
+                   data-message="Tên đăng ký bắt buộc phải nhập"/>
+            <span id="username_error"></span>
+        </div>
+        <div class="container">
+            <label><b>Mật khẩu</b></label>
+            <input type="password" placeholder="Nhập mật khẩu" id="password" name="password" class="control"
+                   data-message="Mật khẩu bắt buộc phải nhập"/>
+            <span id="password_error"></span>
+        </div>
+        <div class="container">
+            <label><b>Xác nhận mật khẩu</b></label>
+            <input type="password" placeholder="Nhập lại mật khẩu" id="confirmpassword" name="confirmpassword"
+                   data-message="Xác nhận mât khẩu bắt buộc phải nhập" required/>
+            <span id="confirmpassword_error"></span>
+        </div>
+        <div class="container">
+            <label><b>Họ</b></label>
+            <input type="text" placeholder="Nhập họ" id="lastname" name="lastname"
+                   data-message="Họ bắt buộc phải nhập"/>
+            <span id="lastname_error"></span>
+        </div>
+        <div class="container">
+            <label><b>Tên</b></label>
+            <input type="text" placeholder="Nhập tên" id="firstname" name="firstname"
+                   data-message="Tên bắt buộc phải nhập"/>
+            <span id="firstname_error"></span>
+        </div>
+        <div class="container">
+            <label><b>Ngày sinh</b></label>
+            <div class="left">
+                <input type="text" placeholder="Ngày" id="day" name="day"
+                       data-message="Ngày bắt buộc phải nhập"/>
+            </div>
+            <div class="center">
+                <input type="text" placeholder="Tháng" id="month" name="month"
+                       name="month" data-message="Tháng bắt buộc phải nhập"/>
+            </div>
+            <div class="right">
+                <input type="text" placeholder="Năm" id="year" name="year"
+                       data-message="Năm bắt buộc phải nhập"/>
+            </div>
+            </br>
+            <span id="day_error"></span></br>
+            <span id="month_error"></span></br>
+            <span id="year_error"></span></br>
+        </div>
+        <div class="container">
+            <label><b>Địa chỉ</b></label>
+            <input type="text" placeholder="Nhập địa chỉ" id="address" name="address"
+                   data-message="Địa chỉ bắt buộc phải nhập"/>
+            <span id="address_error"></span>
+        </div>
+        <div class="container">
+            <label><b>Số điện thoại</b></label>
+            <input type="text" placeholder="09x-xxx-xxxx" id="phone" name="phone"
+                   data-message="Số điện thoại bắt buộc phải nhập"/>
+            <span id="phone_error"></span>
+        </div>
+        <div class="container">
+            <label><b>Số tài khoản</b></label>
+            <input type="text" placeholder="xxx-xxxx-xxx" id="acc" name="acc"
+                   data-message="Số tài khoản bắt buộc phải nhập" required/>
+            <span id="acc_error"></span>
+        </div>
+        <button type="button" id="btnRegister">Đăng ký</button>
+        <button type="button" id="btnReset" value="Hủy">Hủy bỏ</button>
+    </div>
+</form>
+</body>
+</html>

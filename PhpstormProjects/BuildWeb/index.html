@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</head>
+<header>
+    <div class="container head">
+        <div class="col-lg-4 start">
+            <p>Today's special Offer!</p>
+        </div>
+        <div class="col-lg-4 searching">
+            <input type="text" class="formsearch" placeholder="Search a product">
+            <img class="search" src="img/searchicon.png">
+        </div>
+        <div class="col-lg-2 cart">
+            <a class="view">View Your Cart</a>
+            <img class="shopping" src="img/shopping.png">
+        </div>
+        <div class="col-lg-2 contact">
+            <img class="user" src="img/user.png">
+            <a class="contactus" href="" title="">Contact US</a>
+        </div>
+    </div>
+</header>
+<body>
+<div id="dialog" title="Mua sản phẩm">
+    <table class="hovertable" id="dtable">
+        <thead>
+        <tr>
+            <td><input type="text" class="product"></td>
+            <td><input type="text" class="number"></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>
+                <button class="add" type="button">Thêm sản phẩm</button>
+            </th>
+            <th>
+                <button class="exit" type="button">Hủy bỏ</button>
+            </th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<table class="hovertable hide" id="dbtable">
+    <thead>
+    <tr class="mytest">
+        <th>Tên sản phẩm</th>
+        <th>Số lượng</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<div class="container test body">
+    <div class="col-lg-3 menu">
+        <ul>
+            <li class="menu1">ALL BRANDS</li>
+            <li class="menu2">VEGETABLES</li>
+            <li class="menu3">FRUITS</li>
+            <li class="menu4">JUICES</li>
+            <li class="menu5">PETFOOD</li>
+            <li class="menu6">BREAD & BAKERY</li>
+            <li class="menu7">CLEANING</li>
+            <li class="menu8">SPICES</li>
+            <li class="menu9">DRY FRUITS</li>
+            <li class="menu10">DAIRY PRODUCTS</li>
+        </ul>
+    </div>
+    <div class="showmenu">
+        <div class="menu01">
+            <img class="main catalog" data-order="main" src="img/main.PNG">
+            <div class="all_click1 hide">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="all_click2 hide">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="all_click3 hide">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="all_click4 hide">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="all_click5 hide">
+                <button type="button">BUY NOW</button>
+            </div>
+        </div>
+        <div class="menu02 hide">
+            <img class="vegetables catalog" data-order="rau" src="img/vegetables.jpg">
+            <div class="ve_click1 hide hanh">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="ve_click2 hide dua">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="ve_click3 hide sulo">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="ve_click4 hide khoaimon">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="ve_click5 hide khoaitay">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="ve_click6 hide muop">
+                <button type="button">BUY NOW</button>
+            </div>
+        </div>
+        <div class="menu03 hide">
+            <img class="fruits catalog" data-order="traicay" src="img/fruits.png">
+            <div class="fr_click1 hide tao">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="fr_click2 hide cam">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="fr_click3 hide nho">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="fr_click4 hide dua">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="fr_click5 hide xoai">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="fr_click6 hide cachua">
+                <button type="button">BUY NOW</button>
+            </div>
+        </div>
+        <div class="menu04 hide">
+            <img class="juices catalog" data-order="nuoctraicay" src="img/juices.PNG">
+            <div class="ju_click1 hide nuoccam">
+                <button type="button">BUY NOW</button>
+            </div>
+            <div class="ju_click2 hide nuocxoai">
+                <button type="button">BUY NOW</button>
+            </div>
+        </div>
+        <div class="menu05 hide">
+            <img class="petfood catalog" data-order="petfood" src="img/petfood.PNG">
+            <!--<div class="ve_click6 rau">-->
+            <!--<button type="button">BUY NOW</button>-->
+            <!--</div>-->
+        </div>
+        <div class="menu06 hide">
+            <img class="bread catalog" data-order="banhmi" src="img/bread.PNG">
+            <!--<div class="ve_click6 rau">-->
+            <!--<button type="button">BUY NOW</button>-->
+            <!--</div>-->
+        </div>
+        <div class="menu07 hide">
+            <img class="cleaning catalog" data-order="dungcu" src="img/clearning.PNG">
+            <!--<div class="ve_click6 rau">-->
+            <!--<button type="button">BUY NOW</button>-->
+            <!--</div>-->
+        </div>
+        <div class="menu08 hide">
+            <img class="spices catalog" data-order="giavi" src="img/spices.PNG">
+            <!--<div class="ve_click6 rau">-->
+            <!--<button type="button">BUY NOW</button>-->
+            <!--</div>-->
+        </div>
+        <div class="menu09 hide">
+            <img class="dryfruits catalog" data-order="hatsay" src="img/dryfruits.PNG">
+            <!--<div class="ve_click6 rau">-->
+            <!--<button type="button">BUY NOW</button>-->
+            <!--</div>-->
+        </div>
+        <div class="menu010 hide">
+            <img class="dairyproducts catalog" data-order="sua" src="img/dairyproducts.PNG">
+            <!--<div class="ve_click6 rau">-->
+            <!--<button type="button">BUY NOW</button>-->
+            <!--</div>-->
+        </div>
+        <div class="voucher">
+            <h3> Get <span>25% Off </span>On First Order And Also Get Gift Voucher <img class="specialicon"
+                                                                                        src="img/special.gif"></h3>
+        </div>
+    </div>
+</div>
+</body>
+<footer>
+</footer>
+</html>

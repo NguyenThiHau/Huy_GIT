@@ -1,0 +1,159 @@
+/* FORM TABLE */
+table.hovertable {
+    font-family: verdana, arial, sans-serif;
+    font-size: 18px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #999999;
+    border-collapse: collapse;
+}
+
+table.hovertable th {
+    background-color: #c3dde0;
+    border-width: 1px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+
+table.hovertable tr {
+    background-color: #d4e3e5;
+}
+
+table.hovertable td {
+    border-width: 1px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+
+/* FORM ADD */
+
+#container {
+    border: 1px solid black;
+}
+
+.form {
+    width: 30%;
+    display: block;
+}
+
+/* Full-width inputs */
+input[type=text] {
+    width: 93%;
+    padding: 5px 5px;
+    margin: 8px 0 5px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+div.container {
+    border: 3px solid #d4e3e5;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-left: 14px;
+}
+
+#btnaddnew {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+#btnsearch {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+#save {
+    padding: 14px 43px;
+    margin-left: 70px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#exit {
+    padding: 14px 43px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+#search {
+    padding: 14px 43px;
+    margin-left: 70px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#cancel {
+    padding: 14px 43px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+}
+
+.hide {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #2B81AF;
+}
+
+#paging li {
+    cursor: pointer;
+}
+
+li.active {
+    display: inline-block;
+    border: solid 1px #3e4255;
+    font-weight: bold;
+    padding: 2px 5px;
+    background-color: lightskyblue;
+}
+
+li {
+    list-style: none;
+}
+
+span {
+    color: red;
+}
+
+span#id_error {
+    padding-left: 25px;
+}
+
+span#product_error {
+    padding-left: 25px;
+}
+
+span#price_error {
+    padding-left: 25px;
+}
+
+span#kind_error {
+    padding-left: 25px;
+}
+
+span#number_error {
+    padding-left: 25px;
+}
+
+table.hovertable tr.yellow{
+    background-color: yellow;
+}
