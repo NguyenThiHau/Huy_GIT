@@ -8,6 +8,7 @@
         "php": ">=5.6.4",
         "barryvdh/laravel-ide-helper": "v2.3.2",
         "caouecs/laravel4-lang": "3.0.23",
+        "gloudemans/shoppingcart": "2.3.0",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "v5.4.1"
