@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Category;
-use Session;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Validation\Validator;
+use App\Category;
+use Session;
 
 class CategoryController extends Controller
 {
@@ -14,11 +15,17 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $list = Category::all();
-        return view('admin.category.list', compact('list'));
+        $keyword = '';
+        if ($request->get('keyword')) {
+            $keyword = $request->get('keyword');
+            $list = Category::where('name', 'LIKE', '%' . $keyword . '%')->paginate(2);
+        } else {
+            $list = Category::paginate(2);
+        }
+        return view('admin.category.list', compact('list', 'keyword'));
     }
 
     /**
@@ -32,6 +39,7 @@ class CategoryController extends Controller
         return view('admin.category.create');
     }
 
+
     public function store(Request $request)
     {
         //
@@ -39,6 +47,7 @@ class CategoryController extends Controller
             'name' => 'required',
             'images' => 'required',
             'type' => 'required',
+            'type' => 'numeric'
         );
         $validator = \Validator::make($request->all(), $rules);
         if ($validator->fails()) {
@@ -63,6 +72,7 @@ class CategoryController extends Controller
         return redirect('admin/category');
     }
 
+
     /**
      * Display the specified resource.
      *
@@ -73,6 +83,9 @@ class CategoryController extends Controller
     public function show($id)
     {
         //
+        $list = Category::where('id', $id)->first();
+
+        return view('admin.category.show', compact('list'));
     }
 
     /**
@@ -85,6 +98,8 @@ class CategoryController extends Controller
     public function edit($id)
     {
         //
+        $list = Category::findOrFail($id);
+        return view('admin.category.edit', compact('list'));
     }
 
     /**
@@ -97,7 +112,23 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $list = Category::find($id);
+        if ($request->hasFile('images')) {
+            $fileName = $request->file('images')->getClientOriginalName();
+            $filePath = public_path('/images/');
+            $request->file('images')->move($filePath, $fileName);
+            $list->images = $request->file('images')->getClientOriginalName();
+        }
+        $list->name = $request->name;
+        $list->slug = $request->slug;
+        $list->sort = $request->sort;
+        $list->meta_title = $request->meta_title;
+        $list->meta_keywords = $request->meta_keywords;
+        $list->type = $request->type;
+        $list->status = $request->status;
+        $list->save();
+        Session::flash('success', 'Edit Category Successfully!');
+        return redirect('admin/category');
     }
 
     /**
@@ -110,5 +141,11 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         //
+        $list = Category::findOrFail($id);
+        if ($list) {
+            $list->delete();
+        }
+        Session::flash('success', 'Deleted "' . $list->title . '" successfully');
+        return redirect('admin/category');
     }
 }

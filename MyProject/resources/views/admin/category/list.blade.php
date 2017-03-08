@@ -1,6 +1,20 @@
 @extends('layouts.admin')
-
 @section('content')
+    <div id="detailModal" class="modal fade" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                </div>
+                <div class="modal-body">
+                    {{--KHU VUC TRUYEN AJAX--}}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn dark btn-outline">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
@@ -38,7 +52,22 @@
             <!--end  Welcome -->
         </div>
     @endif
+
     <!-- BEGIN SAMPLE TABLE PORTLET-->
+    <div>
+    </div>
+    {!! Form::open(['method'=>'GET','url'=>'admin/category']) !!}
+    <div class="actions">
+        <div class="portlet-input input-inline">
+            <div class="input-icon right">
+                <i class="icon-magnifier"></i>
+                <input class="form-control input-circle" placeholder="search..." type="text" value="{{$keyword}}"
+                       name="keyword">
+            </div>
+        </div>
+    </div>
+    {!! Form::close() !!}
+    <br>
     <div class="portlet box green">
         <div class="portlet-title">
             <div class="caption">
@@ -51,7 +80,10 @@
                 <a href="javascript:;" class="remove"> </a>
             </div>
         </div>
+
         <div class="portlet-body">
+            <a href="{{url('admin/category/create')}}" class="btn green-meadow " type="button">Create</a>
+
             <div class="table-scrollable">
                 <table class="table table-striped table-hover">
                     <thead>
@@ -88,6 +120,8 @@
                                         'method'=>'DELETE',
                                         'url'=>['admin/category',$item->id]
                                     ]) !!}
+                                    <a href="javascript:void(0);" onclick="showDetail({{ $item->id }})"
+                                       class="btn btn-default green">View</a>
                                     <a href="{{url('admin/category/'.$item->id.'/edit')}}"
                                        class="btn btn-primary">Edit</a>
                                     <button type="submit" onclick="return confirm('Are you sure?'); "
@@ -101,6 +135,8 @@
                     @endif
                     </tbody>
                 </table>
+                {{--HAM TAO PAGINATION--}}
+                {{ $list->appends(Request::only('keyword'))->links() }}
             </div>
         </div>
     </div>

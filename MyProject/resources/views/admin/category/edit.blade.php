@@ -24,7 +24,7 @@
         </div>
         <div class="portlet-body form">
             <div class="form-body">
-                {!! Form::open(['method'=>'POST','url'=>'admin/category','role'=>'form','files'=>true]) !!}
+                {!! Form::open(['method'=>'PATCH','url'=>['admin/category',$list->id],'role'=>'form','files'=>true]) !!}
                 {{--HAM BAO LOI VALIDATOR--}}
                 @if (count($errors) > 0)
                     <div class="alert alert-danger">
@@ -37,38 +37,42 @@
                 @endif
                 <div class="form-group">
                     <label>Category</label>
-                    <input type="text" name='name' class="form-control input-lg">
+                    <input type="text" name='name' value="{{$list->name}}" class="form-control input-lg">
                 </div>
                 <div class="form-group">
                     <label>Slug</label>
-                    <input type="text" name='slug' class="form-control input-lg">
+                    <input type="text" name='slug' value="{{$list->slug}}" class="form-control input-lg">
                 </div>
                 <div class="form-group">
                     <label>Image</label>
-                    <input type="file" name="images" required autofocus>
+                    <div>
+                        <img src="{{url('images/')}}/{{$list->images}}" alt="" WIDTH="100"/>
+                    </div>
+                    <input type="file" name="images" value="{{$list->images}}">
                 </div>
                 <div class="form-group">
                     <label>Sort</label>
-                    <input type="text" name='sort' class="form-control input-lg">
+                    <input type="text" name='sort' value="{{$list->sort}}" class="form-control input-lg">
                 </div>
                 <div class="form-group">
                     <label>Meta title</label>
-                    <input type="text" name='meta_title' class="form-control input-lg">
+                    <input type="text" name='meta_title' value="{{$list->meta_title}}" class="form-control input-lg">
                 </div>
                 <div class="form-group">
                     <label>Meta keywords</label>
-                    <input type="text" name='meta_keywords' class="form-control input-lg">
+                    <input type="text" name='meta_keywords' value="{{$list->meta_keywords}}"
+                           class="form-control input-lg">
                 </div>
                 <div class="form-group">
                     <label>Type</label>
-                    <input type="text" name='type' class="form-control input-lg">
+                    <input type="text" name='type' value="{{$list->type}}" class="form-control input-lg">
                 </div>
                 <div class="form-group">
                     <label>Status</label>
-                    <input type="text" name='status' class="form-control input-lg">
+                    <input type="text" name='status' value="{{$list->status}}" class="form-control input-lg">
                 </div>
                 <div class="form-actions right">
-                    <button type="submit" class="btn btn-primary">Create category</button>
+                    <button type="submit" class="btn btn-primary">Edit category</button>
                     <a class="btn btn-success red" href="{{url('admin/category')}}">
                         Cancel
                     </a>
